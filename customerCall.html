@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueJeans</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./styles/customerCall.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<body>
+    <div class="viewContainer">
+      <!-- remote view stream-->
+      <video autoplay="true" id="remoteStreamVideoElement"></video>
+      <!-- remote streamer name section -->
+      <div class="remoteViewerName">
+          <h2>Joshua Reed</h2>
+      </div>
+      <div>
+        <!-- self view -->
+      <div class="selfStreamContainer">
+        <video autoplay="true" id="selfStreamVideoElement" muted poster="./assets/unknown-person.jpeg"></video>
+        <div id="imageElement" class="hideElement">
+          <img src="./assets/unknown-person.jpeg" class="selfStreamImage" />
+        </div>
+        <div class="overlayName" id="selfStreamerName">JJJvvv</div>
+      </div>
+      <!-- controls -->
+      <div class="controlContainer">
+        <div class="customerViewIconCircle customerViewActive" id="myMic" onclick="audioChange()">
+          <i class="fa fa-microphone customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewInactive" id="endVideoCall" onclick="endVideoCall()">
+          <i class="fa fa-phone customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewActive" id="myVideo" onclick="videoChange()">
+          <i class="fa fa-video-camera customerViewIcon" style="font-size: 55px !important;"></i>
+        </div>
+      </div>
+      </div>
+    </div>
+  <script src="./scripts/customerCall.js"></script>
+</body>
+
+</html>

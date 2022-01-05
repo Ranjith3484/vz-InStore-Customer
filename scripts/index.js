@@ -16,7 +16,7 @@ function goToVideoChat() {
     CANDIDATE: "CANDIDATE",
   };
 
-  let code = 123456789;
+  let code = 987654321;
   let peerConnection;
   let signaling;
   const senders = [];

@@ -149,6 +149,14 @@ p{
     margin-bottom: 30px;
 }
 
+input{
+    border: 0px !important;
+    border-bottom: 2px solid black !important;
+    width: 300px;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+}
+
 select{
     background-color: transparent;
      color: black;
@@ -159,7 +167,7 @@ select{
      border-right: 1px solid grey;
      border-bottom: 2px solid black;
      padding: 3px 10px;
-     width: 220px;
+     width: 320px !important;
      font-size: 20px;
      margin-bottom: 50px;
      cursor: pointer;

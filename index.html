@@ -57,13 +57,16 @@
           <h1>Talk to a representative</h1>
           <p class="noteText">Get what you need quickly. From shopping to support, appointments are recommended.</p>
           <div class="helpText">What can we help you with?</div>
+          <p class="labelText">Name</p>
+          <input id='name' required></input>
+          <p class="labelText">Contact Number</p>
+          <input id="contactNumber" required maxlength="13" minlength="10"
+          onkeypress="return onlyNumberKey(event)" onpaste="return false" ></input>
           <p class="labelText">Reason</p>
           <select placeholder="Reason" required id="callRequestReason">
             <option value="" disabled hidden selected style="background-color: white;color: black;">Reason</option>
             <option value="Shop" style="background-color: white;color: black;">Shop</option>
           </select>
-          <p class="labelText">Additonal Comments</p>
-          <textarea id="comments"></textarea>
           <br></br>
           <button class="submitButton" type="submit">Continue</button>
         </form>

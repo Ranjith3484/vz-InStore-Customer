@@ -12,37 +12,136 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <body>
-    <div class="viewContainer">
-      <!-- remote view stream-->
-      <video autoplay="true" id="remoteStreamVideoElement"></video>
-      <!-- remote streamer name section -->
-      <div class="remoteViewerName">
-          <h2>Joshua Reed</h2>
-      </div>
-      <div>
-        <!-- self view -->
-      <div class="selfStreamContainer">
-        <video autoplay="true" id="selfStreamVideoElement" muted poster="./assets/unknown-person.jpeg"></video>
-        <div id="imageElement" class="hideElement">
-          <img src="./assets/unknown-person.jpeg" class="selfStreamImage" />
-        </div>
-        <div class="overlayName" id="selfStreamerName">JJJvvv</div>
-      </div>
-      <!-- controls -->
-      <div class="controlContainer">
-        <div class="customerViewIconCircle customerViewActive" id="myMic" onclick="audioChange()">
-          <i class="fa fa-microphone customerViewIcon"></i>
-        </div>
-        <div class="customerViewIconCircle customerViewInactive" id="endVideoCall" onclick="endVideoCall()">
-          <i class="fa fa-phone customerViewIcon"></i>
-        </div>
-        <div class="customerViewIconCircle customerViewActive" id="myVideo" onclick="videoChange()">
-          <i class="fa fa-video-camera customerViewIcon" style="font-size: 55px !important;"></i>
+  <div>
+    <div class="navBar">
+      <!-- header one -->
+      <div class="alignContentCenter">
+        <div class="HeaderOne">
+          <div class="rowContent">
+            <p>Personal</p>&emsp;&emsp;
+            <p>Business</p>
+          </div>
+          <div class="rowContent">
+            <p>Stores</p>&emsp;&emsp;
+            <p>Espanol</p>
+          </div>
         </div>
       </div>
+      <!-- header two -->
+      <div class="alignContentCenter">
+        <div class="HeaderTwo">
+          <div class="rowContent">
+            <img src="./assets/v-logo.png" class="logoImage" />
+          </div>
+          <div class="rowContent">
+            <p>Shop</p>&emsp;&emsp;
+            <p>Why Verizon</p>&emsp;&emsp;
+            <p>Support</p>
+          </div>
+          <div class="rowContent" style="align-items: center;">
+            <p>Sign in</p>&emsp;&emsp;
+            <i class="fa fa-search icon"></i>&emsp;&emsp;
+            <i class="fa fa-shopping-cart icon"></i>
+          </div>
+        </div>
+      </div>
+      <!-- header three -->
+      <div class="HeaderThree">
+        <h6>Have a phone you love? Get up to 5500 when you <u>bring your phone</u> . &ensp; <i
+            class="fa fa-info iconCircle"></i> </h6>
       </div>
     </div>
-  <script src="./scripts/index.js"></script>
+    <div class="contentSection">
+      <!-- Form Section -->
+      <div class="alignContentCenter" style="background-color: white;padding-bottom: 70px;">
+        <form class="formSection" id="detailsForm">
+          <h1>Talk to a representative</h1>
+          <p class="noteText">Get what you need quickly. From shopping to support, appointments are recommended.</p>
+          <div class="helpText">What can we help you with?</div>
+          <p class="labelText">Reason</p>
+          <select placeholder="Reason" required id="callRequestReason">
+            <option value="" disabled hidden selected style="background-color: white;color: black;">Reason</option>
+            <option value="Shop" style="background-color: white;color: black;">Shop</option>
+          </select>
+          <p class="labelText">Additonal Comments</p>
+          <textarea id="comments"></textarea>
+          <br></br>
+          <button class="submitButton" type="submit">Continue</button>
+        </form>
+      </div>
+      <!-- footer section -->
+      <div class="alignContentCenter">
+        <div class="footerSection">
+          <div class="columnContent">
+            <div class="columnContentLarge">
+              <h5>Shop</h5>
+              <h6 class="navigationText">Devices</h6>
+              <h6 class="navigationText">Accesories</h6>
+              <h6 class="navigationText">Plans</h6>
+              <h6 class="navigationText">Home Internat & TV</h6>
+              <h6 class="navigationText">Entertainment</h6>
+              <h6 class="navigationText">Details</h6>
+            </div>
+            <div class="columnContentSmall">
+              <h5>Most Popular</h5>
+              <h6 class="navigationText">Apple iPhone13 Pro</h6>
+              <h6 class="navigationText">Samsung Galaxy Z Fold3</h6>
+            </div>
+          </div>
+          <div class="columnContent">
+            <div class="columnContentLarge">
+              <h5>Top Device Brands</h5>
+              <h6 class="navigationText">Samsung</h6>
+              <h6 class="navigationText">Apple</h6>
+              <h6 class="navigationText">Motorola</h6>
+              <h6 class="navigationText">Google</h6>
+            </div>
+            <div class="columnContentSmall">
+              <h5>Top Accessory Brands</h5>
+              <h6 class="navigationText">Otterbox</h6>
+              <h6 class="navigationText">ZAGG</h6>
+            </div>
+          </div>
+          <div class="columnContent">
+            <div class="columnContentLarge">
+              <h5>Support</h5>
+              <h6 class="navigationText">Support overview</h6>
+              <h6 class="navigationText">Return policy</h6>
+              <h6 class="navigationText">Contact us</h6>
+              <h6 class="navigationText">Sign in</h6>
+              <h6 class="navigationText">Download My Verizon App</h6>
+            </div>
+            <div class="columnContentSmall">
+              <h5>Important Consumer Information</h5>
+              <h6 class="navigationText">Terms & Conditions</h6>
+              <h6 class="navigationText">Device Payment Terms & Conditions</h6>
+            </div>
+          </div>
+          <div class="columnContent">
+            <div class="columnContentLarge">
+              <h5>About Verizon</h5>
+              <h6 class="navigationText">About us</h6>
+              <h6 class="navigationText">Careers</h6>
+              <h6 class="navigationText">News</h6>
+              <h6 class="navigationText">Responsibility</h6>
+              <h6 class="navigationText">Verizon Innovation Program</h6>
+              <h6 class="navigationText">Consumer Education</h6>
+            </div>
+            <div class="columnContentSmall">
+              <h5>Follow Verizon</h5>
+              <div class="socialMediaRow">
+                <i class="fa fa-facebook icon action"></i>&emsp;
+                <i class="fa fa-twitter icon action"></i>&emsp;
+                <i class="fa fa-youtube icon action"></i>&emsp;
+                <i class="fa fa-instagram icon action"></i>&emsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="./scripts/index.js"></script>
 
 </html>

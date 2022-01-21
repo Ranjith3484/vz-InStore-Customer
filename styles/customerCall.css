@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'verizonFont';
+  src: URL('./VERIZONNHGEDS-REGULAR.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'verizonBoldFont';
+  src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
+}
+
+body{
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  background-color: #3399ff;
+  /* background-image: linear-gradient(to top, rgba(51, 153, 255,0.3) 20%, rgba(51, 153, 255) 80%); */
+  font-family: verizonFont;
+}
+
+h2{
+  font-size: 45px !important;
+  color: white;
+  font-family: verizonFont;
+}
+
+
+h3{
+  font-size: 30px !important;
+  color: white;
+  font-family: verizonFont;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.viewContainer{
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  font-family: verizonFont;
+  background-color: #666;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.viewContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#remoteStreamVideoElement {
+  height: 100%;
+  width: 100%; 
+  object-fit:cover;
+}
+
+.remoteViewerName{
+  width: 100%;
+  background-color:#666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: -10px;
+  height: 70px !important;
+}
+
+.selfStreamContainer{
+  height: 230px;
+  width: 350px;
+  float: left;
+  margin-left: -170px;
+  margin-top: -70px;
+}
+
+#selfStreamVideoElement {
+  height: 230px;
+  width: 350px; 
+  margin: 0px;
+  padding: 0px;
+  border: 0; 
+  object-fit: cover;
+  margin-top:7px
+}
+
+.selfStreamImage{
+  height: 230px;
+  width: 350px;
+  margin-top:7px
+}
+
+.overlayName{
+  color:white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: -200px;
+  font-family: verizonBoldFont;
+}
+
+
+.hideElement{
+  display: none;
+}
+
+.controlContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  margin-left: 20% !important;
+}
+
+.customerViewIcon{
+  color:white;
+  font-size: 70px !important;
+}
+
+.customerViewIcon:hover{
+  transform: scale(1.07);
+}
+
+.customerViewIconCircle{
+ height: 110px;
+ width: 110px;
+ border-radius: 100%;
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.crossLine {
+  background: 
+      linear-gradient(to top left,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0) calc(50% - 3px),
+          rgb(255,255,255) 50%,
+          rgba(0,0,0,0) calc(50% + 3px),
+          rgba(0,0,0,0) 100%),
+      linear-gradient(to top right,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0) calc(50% - 0px),
+          rgb(255,255,255) 50%,
+          rgba(0,0,0,0) calc(50% + 0px),
+          rgba(0,0,0,0) 100%);
+}
+
+.customerViewActive{
+  background-color: #666;
+}
+
+.customerViewInactive{
+  background-color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  h2{
+    font-size: 25px !important;
+    color: white;
+    font-family: verizonFont;
+  }
+
+  .viewContainer{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top:50%;
+    position: absolute;
+    background-color: #666;
+  }
+
+  #remoteStreamVideoElement {
+    height: 70%;
+    width: 100%; 
+    object-fit:contain;
+  }
+
+.remoteViewerName{
+    margin-top: -10px;
+    height: 40px;
+    background-color: #3399ff;
+}
+
+.selfStreamContainer{
+  display: none;
+}
+
+.controlContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 0% !important;
+}
+
+.customerViewIcon{
+  color:white;
+  font-size: 50px !important;
+}
+
+.customerViewIconCircle{
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+   align-content: center;
+ }
+}

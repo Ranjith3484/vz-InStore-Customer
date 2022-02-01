@@ -5,6 +5,49 @@ var customerViewClientVideo = document.querySelector(
   "#remoteStreamVideoElement"
 );
 
+//scale drone api for passing messages (audio/video - mute/unmute , customer info)
+const CLIENT_ID = "lo7BTdylZk5eQqX7";
+
+const drone = new ScaleDrone(CLIENT_ID, {
+  data: {
+    name: "customer",
+  },
+});
+
+let members = [];
+
+drone.on("open", (error) => {
+  if (error) {
+    return console.error(error);
+  }
+  console.log("Successfully connected to Scaledrone");
+
+  const room = drone.subscribe("observable-room");
+  room.on("open", (error) => {
+    if (error) {
+      return console.error(error);
+    }
+    console.log("Successfully joined room");
+  });
+
+  
+  room.on("data", (text, member) => {
+    console.log(text)
+    if (member.clientData.name === "CSR") {
+     if (text === "showingModel") {
+       console.log('remove logo and show remote stream')
+      } 
+    }
+  });
+});
+
+drone.on("close", (event) => {
+  console.log("Connection was closed", event);
+});
+
+drone.on("error", (error) => {
+  console.error(error);
+});
 
 //start video chat
 function goToVideoChat() {

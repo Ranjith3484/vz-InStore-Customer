@@ -6,144 +6,209 @@
   <title>BlueJeans</title>
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/customerView.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <body>
-  <div>
-    <div class="navBar">
-      <!-- header one -->
-      <div class="alignContentCenter">
-        <div class="HeaderOne">
-          <div class="rowContent">
-            <p>Personal</p>&emsp;&emsp;
-            <p>Business</p>
-          </div>
-          <div class="rowContent">
-            <p>Stores</p>&emsp;&emsp;
-            <p>Espanol</p>
-          </div>
+  <!-- top images -->
+  <div class="row">
+    <div class="column">
+      <img class="introImage" src="./assets/banner-1.png" />
+    </div>
+    <div class="column">
+      <img class="introImage" src="./assets/banner-2.png" />
+    </div>
+  </div>
+  <!-- 3 column section -->
+  <div class="row">
+    <!-- address column -->
+    <div class="outerColumn grey">
+      <div class="addSpace"></div>
+      <div class="container">
+        <h5>Verizon Company Store</h5>
+        <div class="spaceBetween">
+          <h1>Wauwatosa</h1>
+          <i class="fa fa-heart-o" id="iconSize"></i>
         </div>
-      </div>
-      <!-- header two -->
-      <div class="alignContentCenter">
-        <div class="HeaderTwo">
-          <div class="rowContent">
-            <img src="./assets/v-logo.png" class="logoImage" />
-          </div>
-          <div class="rowContent">
-            <p>Shop</p>&emsp;&emsp;
-            <p>Why Verizon</p>&emsp;&emsp;
-            <p>Support</p>
-          </div>
-          <div class="rowContent" style="align-items: center;">
-            <p>Sign in</p>&emsp;&emsp;
-            <i class="fa fa-search icon"></i>&emsp;&emsp;
-            <i class="fa fa-shopping-cart icon"></i>
-          </div>
+        <div class="addSpace"></div>
+        <h5>11415W Burleigh St,</h5>
+        <h5>Suite 101,</h5>
+        <h5>Wauwatosa, WI,</h5>
+        <h5>53222</h5>
+        <div class="addSpace"></div>
+        <u>Change location</u>
+        <div class="addSpace"></div>
+        <i class="fa fa-video-camera actionLink" id="iconSize" onclick="openCloseVideoCallForm()">
+          <u style="font-weight: bold;padding-left: 5px;
+          font-family: verizonBoldFont;">Start a video call with in-store rep</u>
+        </i>
+        <div class="addSpace"></div>
+        <div class="spaceBetween">
+          <h5>Today:</h5>
+          <h5>Open until 7PM</h5>
         </div>
-      </div>
-      <!-- header three -->
-      <div class="HeaderThree">
-        <h6>Have a phone you love? Get up to 5500 when you <u>bring your phone</u> . &ensp; <i
-            class="fa fa-info iconCircle"></i> </h6>
+        <div class="addSpace"></div>
+        <div class="spaceBetween">
+          <h5>Tomorrow:</h5>
+          <h5>11AM - 7PM</h5>
+        </div>
+        <div class="addSpace"></div>
+        <u>See More</u>
+        <div class="addSpace"></div>
+        <hr>
+        </hr>
+        <div class="block">
+          <i class="fa fa-truck" id="iconSize"></i>
+          Curbside Pickup
+          <i class="fa fa-check" id="coloredIcon"></i>
+        </div>
+        <div class="block">
+          <i class="fa fa-shopping-bag" id="iconSize"></i>
+          In-Store Pickup
+          <i class="fa fa-check" id="coloredIcon"></i>
+        </div>
+        <p style="padding-top: 5px;color:black">Normally available for pickup within an hour</p>
+        <div class="addSpace"></div>
+        <div class="ratingRow">
+          <i class="ratingText">Rating: </i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star checked"></i>
+          <i class="fa fa-star unchecked"></i>
+          <i class="fa fa-star unchecked"></i>
+        </div>
+        <u style="float: right;">Reviews (53)</u>
+        <br />
+        <u style="margin-left: 20px;">Leave a Review</u>
       </div>
     </div>
-    <div class="contentSection">
-      <!-- Form Section -->
-      <div class="alignContentCenter" style="background-color: white;padding-bottom: 70px;">
-        <form class="formSection" id="detailsForm">
-          <h1>Talk to a representative</h1>
-          <p class="noteText">Get what you need quickly. From shopping to support, appointments are recommended.</p>
-          <div class="helpText">What can we help you with?</div>
-          <p class="labelText">Name</p>
-          <input id='name' required></input>
-          <p class="labelText">Contact Number</p>
-          <input id="contactNumber" required maxlength="13" minlength="10"
-          onkeypress="return onlyNumberKey(event)" onpaste="return false" ></input>
-          <p class="labelText">Reason</p>
-          <select placeholder="Reason" required id="callRequestReason">
-            <option value="" disabled hidden selected style="background-color: white;color: black;">Reason</option>
-            <option value="Shop" style="background-color: white;color: black;">Shop for new phones</option>
-          </select>
-          <br></br>
-          <button class="submitButton" type="submit">Continue</button>
-        </form>
+    <!-- googel map column -->
+    <div class="innerColumn">
+      <div class="mapContainer">
+        <!-- <div id="googleMap" class="googleMap"></div> -->
+      <img src="./assets/googleMap.png" class="googleMapImage"/>   
       </div>
-      <!-- footer section -->
-      <div class="alignContentCenter">
-        <div class="footerSection">
-          <div class="columnContent">
-            <div class="columnContentLarge">
-              <h5>Shop</h5>
-              <h6 class="navigationText">Devices</h6>
-              <h6 class="navigationText">Accesories</h6>
-              <h6 class="navigationText">Plans</h6>
-              <h6 class="navigationText">Home Internat & TV</h6>
-              <h6 class="navigationText">Entertainment</h6>
-              <h6 class="navigationText">Details</h6>
-            </div>
-            <div class="columnContentSmall">
-              <h5>Most Popular</h5>
-              <h6 class="navigationText">Apple iPhone13 Pro</h6>
-              <h6 class="navigationText">Samsung Galaxy Z Fold3</h6>
-            </div>
-          </div>
-          <div class="columnContent">
-            <div class="columnContentLarge">
-              <h5>Top Device Brands</h5>
-              <h6 class="navigationText">Samsung</h6>
-              <h6 class="navigationText">Apple</h6>
-              <h6 class="navigationText">Motorola</h6>
-              <h6 class="navigationText">Google</h6>
-            </div>
-            <div class="columnContentSmall">
-              <h5>Top Accessory Brands</h5>
-              <h6 class="navigationText">Otterbox</h6>
-              <h6 class="navigationText">ZAGG</h6>
-            </div>
-          </div>
-          <div class="columnContent">
-            <div class="columnContentLarge">
-              <h5>Support</h5>
-              <h6 class="navigationText">Support overview</h6>
-              <h6 class="navigationText">Return policy</h6>
-              <h6 class="navigationText">Contact us</h6>
-              <h6 class="navigationText">Sign in</h6>
-              <h6 class="navigationText">Download My Verizon App</h6>
-            </div>
-            <div class="columnContentSmall">
-              <h5>Important Consumer Information</h5>
-              <h6 class="navigationText">Terms & Conditions</h6>
-              <h6 class="navigationText">Device Payment Terms & Conditions</h6>
-            </div>
-          </div>
-          <div class="columnContent">
-            <div class="columnContentLarge">
-              <h5>About Verizon</h5>
-              <h6 class="navigationText">About us</h6>
-              <h6 class="navigationText">Careers</h6>
-              <h6 class="navigationText">News</h6>
-              <h6 class="navigationText">Responsibility</h6>
-              <h6 class="navigationText">Verizon Innovation Program</h6>
-              <h6 class="navigationText">Consumer Education</h6>
-            </div>
-            <div class="columnContentSmall">
-              <h5>Follow Verizon</h5>
-              <div class="socialMediaRow">
-                <i class="fa fa-facebook icon action"></i>&emsp;
-                <i class="fa fa-twitter icon action"></i>&emsp;
-                <i class="fa fa-youtube icon action"></i>&emsp;
-                <i class="fa fa-instagram icon action"></i>&emsp;
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <!-- other links column -->
+    <div class="outerColumn">
+      <div class="container">
+        <i class="fa fa-truck actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Get Directions</u>
+        </i>
+        </br>
+        <i class="fa fa-calendar actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Schedule an appointment</u>
+        </i>
+        </br>
+        <i class="fa fa-calendar actionLink" id="textAlignedIcon">
+          <u class="iconAlignedText">Request a business sales appointment</u>
+        </i>
+        <div class="addSpace"></div>
+        <h5>By clicking on the link above, you represent that neither you nor anyone in your household have COVID19 or
+          its symptoms (e.g. fever, cough, shortness of breath)
+          or are being quarantined for suspected exposure to the virus.
+        </h5>
+        <br />
+        <h5>Occupancy limits may apply. You may need to wait outside or in your vehicle before going in. Non-vaccinated
+          customers and employees are required to use a
+          mask when visiting our stores. Please note: Verizon follows state and local requirements regarding mask use.
+          You may be required to wear a
+          mask even if you are fully vaccinated.
+        </h5>
       </div>
     </div>
   </div>
+
+  <!-- open video call request form -->
+  <div class="openVideoCallForm hideElement" id="openVideoCallForm">
+    <img src="./assets/verizon-logo.png" class="logoImage hideInMobile" />
+    <div class="alignCenter">
+      <h1 class="white" style="font-size: 40px !important;margin-bottom: 10px !important;">Reach us here!</h1>
+      <h4 class="white">
+        Want to talk with us? We're always happy to listen. Here's how you can reach us
+      </h4>
+      </br>
+      <form onsubmit="submitForm(event)">
+        <input value="" placeholder="Your name" required id="callRequesterName" />
+        <input type="text" value=""  placeholder="Contact number" required id="callRequesterNumber" 
+        maxlength="13" minlength="10"  onkeypress="return onlyNumberKey(event)" onpaste="return false"/>
+        <select placeholder="Reason for video call" required id="callRequestReason">
+          <option value="" disabled hidden selected style="background-color: black;color: white;">Reason for video call</option>
+          <option value="Inquire about new phone" style="background-color: black;color: white;">Inquire about new phone</option>
+        </select>
+        <button class="submitButton">Connect</button>
+      </form>
+      <div class="addSpace"></div>
+      <p>*Video calls will use data allotment if connected to cellular data. Standard data rates
+        according to your cellular plan apply.
+      </p>
+    </div>
+  </div>
+
+  <!-- loading screen -->
+  <div class="loadingContainer hideElement" id="openLoadingScreen">
+    <div>
+      <h2 class="loadingHeader">Creating secure connection</h2>
+      <p class="waitingHeader">Waiting for CSR to join</p>
+      <div class="loadingContain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- customer view video call -->
+  <div class="customerViewContainer hideElement" id="customerViewContainer">
+    <img src="./assets/verizon-logo.png" class="customerViewLogoImage hideInMobile" />
+    <div class="customerViewRow">     
+
+      <!-- remote view -->
+      <div class="customerViewColumnLarge">
+                   <!-- remote audio status icon -->
+      <div class="top-right">
+        <i class="fa fa-microphone remoteAudioUnMutedIcon" ></i>
+        <i class="fa fa-microphone-slash remoteAudioMutedIcon" style="display: none;"></i>
+      </div>
+        <div class="customerViewClientContainer">
+          <div class="videoLogoLayer">
+            <img src="./assets/verizon-logo.png" class="videoLogo"/>
+            <br></br>
+            <h4 class="connectedStatus">You are connected with verizon support</h4>
+          </div>
+          <video autoplay="true" id="customerViewClientVideoElement"></video>
+        </div>
+      </div>
+      <div class="customerViewColumnSmall">
+        <div class="customerViewIconCircle customerViewActive" id="myMic" onclick="audioChange()">
+          <i class="fa fa-microphone customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewActive" id="myVideo" onclick="videoChange()">
+          <i class="fa fa-video-camera customerViewIcon"></i>
+        </div>
+        <div class="customerViewIconCircle customerViewInactive" id="endVideoCall" onclick="endVideoCall()">
+          <i class="fa fa-times customerViewIcon"></i>
+        </div>
+      </div>
+    </div>
+    <!-- self view -->
+    <div class="customerViewCustomerContainer">
+      <video autoplay="true" id="customerViewCustomerVideoElement" muted></video>
+      <div id="imageElement" class="hideElement">
+        <img src="./assets/unknown-person.jpeg" class="customerViewCustomerImage" />
+        <div class="overlayName" id="customerName"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
+  <!-- google map api -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY42vMJ-PDc1rL8YN1QpnNly9hU350RCs&callback=myMap" async defer></script> -->
 </body>
-<script src="./scripts/index.js"></script>
 
 </html>

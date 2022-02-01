@@ -164,22 +164,25 @@
   </div>
 
   <!-- customer view video call -->
-  <div class="customerViewContainer hideElement" id="customerViewContainer">
+  <div class="customerViewContainer" id="customerViewContainer">
     <img src="./assets/verizon-logo.png" class="customerViewLogoImage hideInMobile" />
     <div class="customerViewRow">     
-
       <!-- remote view -->
       <div class="customerViewColumnLarge">
-                   <!-- remote audio status icon -->
+          <!-- remote audio status icon -->
       <div class="top-right">
         <i class="fa fa-microphone remoteAudioUnMutedIcon" ></i>
         <i class="fa fa-microphone-slash remoteAudioMutedIcon" style="display: none;"></i>
       </div>
         <div class="customerViewClientContainer">
+          <!-- layer on top of video element -->
           <div class="videoLogoLayer">
-            <img src="./assets/verizon-logo.png" class="videoLogo"/>
-            <br></br>
-            <h4 class="connectedStatus">You are connected with verizon support</h4>
+            <div style="display: block;">
+              <div style="width: 100% !important;">
+                <img src="./assets/verizon-logo.png" class="videoLogo"/>
+              </div>
+              <div class="connectedStatus">You are connected with verizon support</div>
+            </div>
           </div>
           <video autoplay="true" id="customerViewClientVideoElement"></video>
         </div>

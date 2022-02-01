@@ -188,9 +188,12 @@
 }
 
 .videoLogoLayer{
-    display: flex;
+       display:flex;
       align-items: center;
       align-content: center;
+      justify-content: center;
+       width: 100%;
+       margin-left: 30%;
 }
 
 .videoLogo{
@@ -201,6 +204,7 @@ object-fit: contain;
 .connectedStatus{
     font-size: 25px;
     color: white;
+    width: 100%;
 }
 @media only screen and (max-width: 850px) {
     .customerViewContainer{

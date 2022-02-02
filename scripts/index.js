@@ -187,9 +187,9 @@ function goToVideoChat() {
     drone.publish({
       room: "observable-room",
       message: {
-        name:localStorage.getItem("customerName"),
-        contact:localStorage.getItem("customerContact"),
-        reason:localStorage.getItem("callReason")
+        name:document.getElementById("callRequesterName").value,
+        contact: document.getElementById("callRequesterNumber").value,
+        reason:document.getElementById("callRequestReason").value
       }
     });
     };

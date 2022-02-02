@@ -89,7 +89,7 @@
     <div class="innerColumn">
       <div class="mapContainer">
         <!-- <div id="googleMap" class="googleMap"></div> -->
-      <img src="./assets/googleMap.png" class="googleMapImage"/>   
+        <img src="./assets/googleMap.png" class="googleMapImage" />
       </div>
     </div>
     <!-- other links column -->
@@ -133,11 +133,13 @@
       </br>
       <form onsubmit="submitForm(event)">
         <input value="" placeholder="Your name" required id="callRequesterName" />
-        <input type="text" value=""  placeholder="Contact number" required id="callRequesterNumber" 
-        maxlength="13" minlength="10"  onkeypress="return onlyNumberKey(event)" onpaste="return false"/>
+        <input type="text" value="" placeholder="Contact number" required id="callRequesterNumber" maxlength="13"
+          minlength="10" onkeypress="return onlyNumberKey(event)" onpaste="return false" />
         <select placeholder="Reason for video call" required id="callRequestReason">
-          <option value="" disabled hidden selected style="background-color: black;color: white;">Reason for video call</option>
-          <option value="Inquire about new phone" style="background-color: black;color: white;">Inquire about new phone</option>
+          <option value="" disabled hidden selected style="background-color: black;color: white;">Reason for video call
+          </option>
+          <option value="Inquire about new phone" style="background-color: black;color: white;">Inquire about new phone
+          </option>
         </select>
         <button class="submitButton">Connect</button>
       </form>
@@ -165,25 +167,25 @@
 
   <!-- customer view video call -->
   <div class="customerViewContainer hideElement" id="customerViewContainer">
+  <!-- layer on top of video element -->
+  <div class="videoLogoLayer">
+    <div style="display: block;">
+      <div style="width: 100% !important;">
+        <img src="./assets/verizon-logo.png" class="videoLogo" />
+      </div>
+      <div class="connectedStatus">You are connected with verizon support</div>
+    </div>
+  </div>
     <img src="./assets/verizon-logo.png" class="customerViewLogoImage hideInMobile" />
-    <div class="customerViewRow">     
+    <div class="customerViewRow">
       <!-- remote view -->
       <div class="customerViewColumnLarge">
-          <!-- remote audio status icon -->
-      <div class="top-right">
-        <i class="fa fa-microphone remoteAudioUnMutedIcon" ></i>
-        <i class="fa fa-microphone-slash remoteAudioMutedIcon" style="display: none;"></i>
-      </div>
+        <!-- remote audio status icon -->
+        <div class="top-right">
+          <i class="fa fa-microphone remoteAudioUnMutedIcon"></i>
+          <i class="fa fa-microphone-slash remoteAudioMutedIcon" style="display: none;"></i>
+        </div>
         <div class="customerViewClientContainer">
-          <!-- layer on top of video element -->
-          <div class="videoLogoLayer">
-            <div style="display: block;">
-              <div style="width: 100% !important;">
-                <img src="./assets/verizon-logo.png" class="videoLogo"/>
-              </div>
-              <div class="connectedStatus">You are connected with verizon support</div>
-            </div>
-          </div>
           <video autoplay="true" id="customerViewClientVideoElement"></video>
         </div>
       </div>
@@ -208,6 +210,8 @@
       </div>
     </div>
   </div>
+
+
 
   <script src="./scripts/index.js"></script>
   <!-- google map api -->

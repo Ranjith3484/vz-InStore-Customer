@@ -249,7 +249,8 @@ margin-left: 20px;
     #customerViewClientVideoElement {
         height: 100%;
         width: 100%; 
-        object-fit: contain
+        object-fit: contain;
+        image-rendering: pixelated;
     }
 
     .customerViewClientContainer{

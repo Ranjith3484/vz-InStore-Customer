@@ -1,506 +1,168 @@
 @font-face {
-  font-family: 'verizonFont';
-  src: URL('./VERIZONNHGEDS-REGULAR.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'verizonBoldFont';
-  src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
-}
+    font-family: 'verizonFont';
+    src: URL('./VERIZONNHGEDS-REGULAR.TTF') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'verizonBoldFont';
+    src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
+  }
 
 html,
-body {
-  /* overflow: scroll; */
-  overflow: auto;
-  width: 100%;
-  height: 100%;
-  padding: 0%;
-  margin: 0%;
-  background-color: white;
+body{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    background-color: white;
+    font-family: verizonFont;
+}
+.login-page-container{
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.login-form{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.login-logo{
+    height: 50px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px !important;
+}
+
+.input-label{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0px !important;
+    color: black;
+    font-family: verizonFont;
+}
+
+.input-fields{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 0px !important;
+    border-bottom: 2px solid black !important;
+    padding: 0px !important;
+    font-size: 20px;
+    padding-left: 10px !important;
   font-family: verizonFont;
 }
 
-h1{
-    margin:2px !important;
-    font-size: 32px !important;
-    text-align: justify;
+.input-fields:focus{
+    outline: none !important;
+    border-bottom: 2px solid #d70819 !important;
 }
 
-h2{
-    margin:2px !important;
-    font-size: 28px !important;
-    text-align: justify;
+.input-fields:hover{
+    border-bottom: 2px solid #d70819 !important;
 }
 
-h3{
-    margin:2px !important;
-    font-size: 24px !important;
-    text-align: justify;
-}
-
-h4{
-    margin:2px !important;
-    font-size: 22px !important;
-    font-weight: 500;
-    text-align: justify;
-}
-
-h5{
-    margin: 2px !important;
-    font-weight: 400;
-    font-size: 18px;
-    text-align: justify;
-}
-
-h6{
-    margin:2px !important;
-    font-size: 15px !important;
-    color: grey;
-    text-align: justify;
-}
-
-p{
-    margin: 2px !important;
-    color: white;
-    text-align: justify;
-}
-
-.block{
-    display: block;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  height: 400px;
-}
-
-/* top images */
-.introImage{
-    width: 100%;
-    height:400px;
-}
-
-/* Create two equal columns and one large column that floats next to each other */
-.outerColumn {
-    float: left;
-    width: 28%;
-    padding-top: 10px;
-    min-height: 800px;
-}
-
-.grey{
-    background-color: #f2f2f2;
-}
-
-.white{
-    color:white;
-}
-
-.container{
-    padding: 20px;
-    padding-right:40px;
-    padding-top:0px;
-}
-
-.spaceBetween{
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.addSpace{
-    height: 20px !important;
-}
-
-.actionLink{
-    font-weight: bold;
-    padding-left: 5px;
-    font-family: verizonBoldFont;
-}
-
-.actionLink:hover{
-   cursor: pointer;
-}
-
-.ratingRow {
-   display:flex;
-   margin-left: 20px;
-}
-
-.ratingText{
-   padding-right: 15px;
-}
-
-.checked {
-    color: black;
-    padding-left: 3px;
-}
-
-.unchecked {
-    color: grey;
-    padding-left: 3px;
-}
-
-.innerColumn {
-    float: left;
-    width: 44%;
-    min-height: 800px;
-}
-
-.mapContainer{
-    padding:20px;
-    padding-bottom: 0px !important;
-}
-
-.googleMap{
-    padding: 5px;
-    min-height: 780px;
-    width:100%
-}
-
-.googleMapImage{
-  height: 780px;
-  object-fit: cover;
-  width: 100%;
-}
-
-#iconSize{
-    font-size: 18px;
-}
-
-#textAlignedIcon{
-    font-size:25px;
-    padding-top: 3px;
-}
-
-.iconAlignedText{
-    font-weight: bold;
-    padding-left: 5px;
-    font-size: 18px;
-    vertical-align: middle;
-    font-family: verizonBoldFont;
-}
-
-#coloredIcon{
-    font-size:15px;
-    color:green;
-}
-
-
-/* open video call form */
-select{
-    background-color: transparent;
-     color: #eeeeee;
-     outline: none;
-     outline-style: none;
-     border-top: none;
-     border-left: none;
-     border-right: none;
-     border-bottom: 2px solid white;
-     padding: 3px 10px;
-     margin-top: 50px;
-     width: 520px;
-     font-size: 20px;
- }
-
-.openVideoCallForm{
-    width: 90%;
-    height: 90%;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-}
-
-.hideElement{
-    display: none;
-}
-
-.logoImage{
+.login-button{
     width: 150px;
-    height:50px;
-    margin-left: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top:auto;
+    left: auto;
+    margin: auto;
     margin-top: 20px;
+    font-family: verizonFont;
 }
 
-.alignCenter{
+.login-button:hover{
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+
+/* snack bar */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top:20px;
+    height: 40px;
+    font-size: 17px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    padding:50px 150px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-}
-
-input{
-    background-color: transparent;
-     color: #eeeeee;
-     outline: none;
-     outline-style: none;
-     border-top: none;
-     border-left: none;
-     border-right: none;
-     border-bottom: 2px solid white;
-     padding: 3px 10px;
-     margin-top: 50px;
-     width: 500px;
-     font-size: 20px;
- }
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-  .submitButton{
-      height: 50px;
-      width: 200px;
-      background-color: white;
-      color: black;
-      font-size: 22px;
-      font-weight: bold;
-      border-radius: 100px;
-      margin-top: 30px;
-      cursor: pointer;
-      font-family: verizonBoldFont;
-  }
-  .submitButton:hover{
-    background-color: black;
-    border:2px solid white;
-    color:white;
-  }
-
-/* loading screen */
-
-@keyframes scaling{
-    0%, 100%{
-      transform: scale(0.2);
-      background-color: #ffffff;
-    }
-    40%{
-      transform: scale(1);
-      background-color: #ffffff;
-    }
-    50%{
-      transform: scale(1);
-      background-color: #ffffff;
-    }
-  }
-  
- .loadingHeader{
-      color:white;
-      font-size: 40px;
-      font-weight: 600;
-      margin-bottom: 20px !important;
-      text-align: justify;
-      font-family: verizonBoldFont;
-  }
-
-  .waitingHeader{
-    color:white;
-    margin-bottom: 60px !important;
     text-align: center;
-    font-family: verizonFont;
-  }
-
-  span {
-      height: 20px;
-      width: 20px;
-      border-radius:50%;
-      transform: scale(0);
-      animation: scaling 2.5s ease-in-out infinite;
-      display: inline-block;
-      margin:.5rem;
   }
   
-  span:nth-child(0){
-    animation-delay:0s;
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
-  span:nth-child(1){
-    animation-delay:0.2s;
+  
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 20px; opacity: 1;}
   }
-  span:nth-child(2){
-    animation-delay:0.4s;
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 3\20px; opacity: 1;}
   }
-  span:nth-child(3){
-    animation-delay:0.6s;
+  
+  @-webkit-keyframes fadeout {
+    from {top: 20px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
   }
-  span:nth-child(4){
-    animation-delay:0.8s;
-  }
-  span:nth-child(5){
-    animation-delay:1s;
-  }
-
-  .loadingContainer {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 90%;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  
+  @keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0; opacity: 0;}
   }
 
-  .loadingContain{
-     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-@media only screen and (max-width: 850px) {
-    .column {
-        float: left;
-        width: 100%;
+@media only screen and (max-width: 500px){
+    .login-form{
+        width: 90%;
+        padding: 0px;
+        box-shadow: 0 0px 0px 0 rgba(0,0,0,0);
     }
-    .outerColumn {
-        float: left;
-        width: 100%;
-        min-height: fit-content;
-        padding-bottom: 50px;
-    }
-    .innerColumn {
-        float: left;
-        width: 100%;
-    }
-    .mapContainer{
-        padding:0px;
-        padding-bottom: 0px !important;
-        width: 97%;
-    }
-
-    /* open video call form */
-    .openVideoCallForm{
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        /* overflow: scroll; */
-  overflow: auto;
-        padding: 30px 0px;
-    }
-    
-    .alignCenter{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding:30px 40px;
-        background-color: black;
-    }
-    input {
-        background-color: transparent;
-         color: #eeeeee;
-         outline: none;
-         outline-style: none;
-         border-top: none;
-         border-left: none;
-         border-right: none;
-         border-bottom: 2px solid white;
-         padding: 3px 10px;
-         margin-top: 30px;
-         width: 350px;
-         font-size: 20px;
-     }
-     select{
-        background-color: transparent;
-         color: #eeeeee;
-         outline: none;
-         outline-style: none;
-         border-top: none;
-         border-left: none;
-         border-right: none;
-         border-bottom: 2px solid white;
-         padding: 3px 10px;
-         margin-top: 30px;
-         width: 370px;
-         font-size: 20px;
-     }
-     .submitButton{
-        height: 40px;
-        width: 30%;
-        background-color: white;
-        color: black;
-        font-size: 18px;
-        font-weight: bold;
-        border-radius: 100px;
-        margin-top: 30px;
-        cursor: pointer;
-        font-family: verizonBoldFont;
-    }
-
-    /* loading screen */
-    .loadingHeader{
-        color:white;
+    .input-fields{
+        width: 95%;
+        height: 30px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        padding: 0px !important;
         font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 10px !important;
-    text-align: justify;
-    font-family: verizonBoldFont;
-    }
-
-    .waitingHeader{
-      color:white;
-      margin-bottom: 30px !important;
-      text-align: center;
-      font-family: verizonFont;
-    }
-
-    .loadingContainer {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        /* overflow: scroll; */
-  overflow: auto;
-      }
-
-      .hideInMobile{
-        display: none;
-     }
 }
-
+}

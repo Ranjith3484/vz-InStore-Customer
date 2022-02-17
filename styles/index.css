@@ -8,243 +8,161 @@
     src: URL('./VERIZONNHGEDS-BOLD.TTF') format('truetype');
   }
 
-  
+html,
 body{
     overflow: auto;
     width: 100%;
     height: 100%;
     padding: 0%;
     margin: 0%;
-    background-color: black;
+    background-color: white;
+    font-family: verizonFont;
+}
+.login-page-container{
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.login-form{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.login-logo{
+    height: 50px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px !important;
+}
+
+.input-label{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0px !important;
+    color: black;
     font-family: verizonFont;
 }
 
-
-h1{
-    margin:2px !important;
-    font-size: 32px !important;
-    text-align: justify;
-}
-
-h2{
-    margin:2px !important;
-    font-size: 28px !important;
-    text-align: justify;
-}
-
-h3{
-    margin:2px !important;
-    font-size: 24px !important;
-    text-align: justify;
-}
-
-h4{
-    margin:2px !important;
-    font-size: 22px !important;
-    font-weight: 500;
-    text-align: justify;
-}
-
-h5{
-    margin: 10px 0px !important;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: justify;
-    color: white;
-}
-
-h6{
-    margin: 2px !important;
-    font-size: 13px !important;
-    color: white;
-    text-align: justify;
-    word-spacing: 3px;
-}
-
-p{
-    margin: 2px !important;
-    color: white;
-    text-align: justify;
-    font-weight: 700;
-}
-
-.navBar{
-    overflow: hidden;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.alignContentCenter{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-.HeaderOne{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin-top: 20px;
-    height: 30px !important;
-}
-
-.rowContent{
-    display: flex;
-    flex-direction: row;
-}
-
-.HeaderTwo{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    height: 80px !important;
-    align-items: center;
-}
-
-.logoImage{
-    width: 50px !important;
-    height: 50px !important;
-}
-
-.HeaderThree{
-    background-color: #666;
+.input-fields{
+    width: 400px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.icon{
-    color: white;
-    font-size: 12px;
-}
-
-.contentSection{
-    margin-top: 160px!important;
-}
-
-.formSection{
-    justify-content: space-between;
-    width: 70%;
-    align-items: center;
-    background-color: white;
-    padding-top: 40px;
-}
-
-.noteText{
-    color: grey;
-    margin: 20px 0px !important;
-}
-
-.helpText{
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: verizonBoldFont;
-    text-decoration: underline;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-input{
+    margin-bottom: 10px;
     border: 0px !important;
     border-bottom: 2px solid black !important;
-    width: 300px;
-    padding: 3px 10px;
-    margin-bottom: 20px;
+    padding: 0px !important;
     font-size: 20px;
+    padding-left: 10px !important;
+  font-family: verizonFont;
 }
 
-select{
-    background-color: transparent;
-     color: black;
-     outline: none;
-     outline-style: none;
-     border-top: 1px solid grey;
-     border-left: 1px solid grey;
-     border-right: 1px solid grey;
-     border-bottom: 2px solid black;
-     padding: 3px 10px;
-     width: 320px !important;
-     font-size: 20px;
-     margin-bottom: 50px;
-     cursor: pointer;
- }
-
- .labelText{
-    color: grey;
-    font-size: 15px;
-    margin-bottom: 10px !important;
+.input-fields:focus{
+    outline: none !important;
+    border-bottom: 2px solid #d70819 !important;
 }
 
-textarea{
-    height: 100px;
-    width: 500px;
+.input-fields:hover{
+    border-bottom: 2px solid #d70819 !important;
 }
 
-.submitButton{
+.login-button{
+    width: 150px;
+    height: 40px;
     background-color: black;
-    color: white;
-    width: 170px !important;
-    height: 40px !important;
-    border-radius: 50px;
+    border-radius: 20px;
     font-size: 20px;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     cursor: pointer;
+    position: relative;
+    top:auto;
+    left: auto;
+    margin: auto;
+    margin-top: 20px;
+    font-family: verizonFont;
 }
 
-.submitButton:hover{
-    background-color: white;
-    color: black;
+.login-button:hover{
     border: 2px solid black;
+    color: black;
+    background-color: white;
 }
 
-.footerSection{
+/* snack bar */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top:20px;
+    height: 40px;
+    font-size: 17px;
     display: flex;
-    justify-content: space-between;
-    width: 70%;
-   margin-bottom: 80px;
-}
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 20px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 3\20px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 20px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
 
-.columnContent{
-    display: flex;
-    flex-direction: column;
+@media only screen and (max-width: 500px){
+    .login-form{
+        width: 90%;
+        padding: 0px;
+        box-shadow: 0 0px 0px 0 rgba(0,0,0,0);
+    }
+    .input-fields{
+        width: 95%;
+        height: 30px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        padding: 0px !important;
+        font-size: 20px;
 }
-
-.columnContentLarge{
-    min-height: 250px;
-    margin-left: 10px;
-    margin-top: 30px;
-}
-
-.columnContentSmall{
-    margin-left: 10px;
-}
-
-.navigationText{
-    margin: 10px 0px !important;
-    font-size: 13px !important;
-    color: rgb(194, 194, 194);
-    text-align: justify;
-    cursor: pointer;
-}
-
-.footerSectionTwo{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin-top: 10px;
-   margin-bottom: 80px;
-}
-
-.socialMediaRow{
-    display: flex;
-    margin-top: 10px;
-}
-
-.action{
-    cursor: pointer;
 }

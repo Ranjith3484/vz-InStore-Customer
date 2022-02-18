@@ -39,7 +39,7 @@ body{
 }
 
 .login-logo{
-    height: 50px;
+    height: 60px;
     object-fit: contain;
     display: flex;
     justify-content: center;
